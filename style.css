@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background-image: url("../praia.jpg");
+  background-image: url("praia.jpg");
   background-size: cover;
   background-position: center;
   margin: 0 auto;
