@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>HEILLYB</title> <!-- DON'T FORGET THE TITLE -->
+
+      <!-- Link to CSS files -->
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+    <!-- PLACE ALL OF YOUR PAGE CONTENT BELOW HERE -->
+
+
+    <!-- the wrap class goes around all of our content
+          for full page width backgrounds move the
+          wrap inside of each container -->
+
+
+    <!-- site navigation -->
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">home</a>•</li>
+        <li><a href="about.html">about</a>•</li>
+        <li><a href="about.resume">resume</a>•</li>
+       <li><a href="portfolio.html" id="active">portfolio</a>•</li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="aboutme">
+          <h1>projects</h1>
+        </div> <!-- /.column -->
+ <!-- /.row -->
+
+    <!-- Main content -->
+<div class="wrapone">
+    <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="before.png">
+    <div class="text">january 2016: before I learned anything about HTML and CSS, I learned about the concept of forking and open source webpage, and for lack of better word, let's call it remixing a webpage! my web design professor had use Mozilla's X-Ray Goggles to reassemble a webpage to make our own. this is the <b>before</b></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="after.png">
+    <div class="text">This is the <b>after</b></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="book.jpg">
+    <div class="text">spring 2016: I created a few social media elements on photoshop for Maritime Aquarium to attract customers to their newest attraction, "Spirit of The Sound" cruise boat.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="firstwebpage.png">
+    <div class="text">february 2016: this was my very first web page, i'm proud to say I've grown alot in the programming world (HTML + CSS have been tackled, next up is Javascript!)</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="mommy.png">
+    <div class="text">summer 2015: my mom is a hairdresser and always needs help promoting her business, this is the most recent project i designed + created for her.</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
